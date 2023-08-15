@@ -1,4 +1,4 @@
-const taskInput = document.getElementById("inputer")
+const taskInput = document.getElementById("task")
 const taskList = document.getElementById("task_list")
 
 taskInput.addEventListener("keyup", function(event) {
@@ -7,8 +7,8 @@ taskInput.addEventListener("keyup", function(event) {
         const li = document.createElement("li")
         li.innerHTML = `
         <span>${taskText}</span>
-        <img src="edit.png" title="Edit Task" class="edit-icon">
-        <img src="done.png" title="Task Done" class="done-icon">
+        <img src="edit.png" title="Edit Task" class="edit_icon">
+        <img src="done.png" title="Task Done" class="done_icon">
         `;
         taskList.appendChild(li)
         taskInput.value = "";
@@ -18,15 +18,15 @@ taskInput.addEventListener("keyup", function(event) {
 taskList.addEventListener("click", function(event) {
     const target = event.target;
   
-    if (target.classList.contains("done-icon")) {
+    if (target.classList.contains("done_icon")) {
         target.parentElement.remove();
-    } else if (target.classList.contains("edit-icon")) {
+    } else if (target.classList.contains("edit_icon")) {
         const taskSpan = target.previousElementSibling;
         const textInput = document.createElement("input");
         textInput.type = "text";
         textInput.className = "edit_input"
         textInput.value = taskSpan.textContent;
-        taskSpan.textContent = ""; // Clear span content
+        taskSpan.textContent = "";
         taskSpan.appendChild(textInput);
         textInput.focus();
 
