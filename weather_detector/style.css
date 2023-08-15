@@ -1,0 +1,64 @@
+
+@font-face {
+    font-family: Cloud;
+    src: url("CloudyCloud-nREq4.otf");
+}
+
+body {
+    background-image: url("weather/64x64/day/rainy_weather.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+}
+
+.general {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: start;
+    padding-top: 20px;
+    padding-left: 50px;
+    font-family: Cloud;
+    color: white;
+    font-size: 50px;
+}
+
+.search {
+    display: block;
+    padding-left: 3%;
+}
+#dropdown {
+    font-family: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    padding-left: 5px;
+    border-radius: 25px;
+    width: 25%;
+    background-color: rgba(214, 233, 255, 0.5);
+    outline: none;
+    appearance: none;
+}
+
+#dropdown option {
+    margin-left: 10px;
+}
+
+#dropdown:hover {
+    outline: none;
+}
+
+.content {
+    flex: 1;
+}
+
+.footer {
+    background-color: #ff9912;
+    padding: 10px;
+}
+
+.footer a {
+    color: #c83200;
+}
