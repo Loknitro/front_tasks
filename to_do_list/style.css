@@ -1,0 +1,75 @@
+@font-face { font-family: Rony; src: url('AngelikaPlayfull-2Og5l.otf'); }
+body {
+    background-color: #202124;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    height: 100vh;
+    font-family: Rony;
+}
+
+.general {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    color: #8BE8E5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+label {
+    font-size: 25px;
+}
+.list {
+    padding: 50px;
+    background-color: #D5FFE4;
+    height: 700px;
+    width: 700px;
+    display: flex;
+    align-self: center;
+    border-radius: 12px;
+    border: 2px solid #8BE8E5;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: start;
+    box-shadow: 10px 10px 15px black;
+}
+
+#inputer {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 10px;
+    border-radius: 16px;
+    border: 2px solid #202124;
+    outline: none;
+    font-family: Rony;
+    font-size: 20px;
+}
+
+li {
+    font-size: 25px;
+}
+
+
+.edit_input {
+    width: 350px;
+    padding: 5px;
+    border-radius: 16px;
+    border: 2px solid #202124;
+    outline: none;
+    font-family: Rony;
+    font-size: 20px;
+}
+
+.edit-icon,
+.done-icon {
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+}
