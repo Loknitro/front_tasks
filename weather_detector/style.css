@@ -50,6 +50,8 @@ body {
     outline: none;
 }
 
+/*Make multiple cards to display each information separetedly, each must have the same size and spacing.
+  They all must be in the same row for better visualization, for now mobile won't be supported/taken into consideration.*/
 .content {
     flex: 1;
 }
