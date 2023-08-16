@@ -9,23 +9,29 @@
 <body>
     <div class="general">
         <div class="header">
-            WEATHER    
-        </div>
-        <div class="search">
-            <select id="dropdown">
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-            </select>
+            WEATHER.IO    
         </div>
         <div class="content">
+            <div class="card" id="country">
+            </div>
+            <div class="card" id="temp">
+            </div>
+            <div class="card" id="ws">
+            </div>
+            <div class="card" id="hmdt">
+            </div>
+            <div class="card" id="ftemp">
+            </div>
+            <div class="card" id="condition">
+            </div>
             <!-- TODO: This part will be responsible for showing all of the information after interacting with the api.
             The information is as follows: temperature, weather condition, wind speed, humidity, temperature feel-->
+        </div>
         </div>
         <div class="footer">
             Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
         </div>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
