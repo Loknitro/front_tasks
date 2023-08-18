@@ -78,6 +78,16 @@ body {
     margin: 25px;
 }
 
+.pesquisa:hover {
+    background-color: #303134;
+    border: 1px solid #303134;
+}
+
+.pesquisa:focus-within {
+    background-color: #303134;
+    border: 1px solid #303134;
+}
+
 .input-icon {
     position: sticky;
     padding-left: 5px;
@@ -106,7 +116,7 @@ textarea{
     background-color: transparent;
     border: none;
     margin: 0;
-    padding: 0px 0px 0px 5px;
+    padding: 3px 0px 0px 5px;
     color: #e8eaed;
     word-wrap: break-word;
     outline: none;
@@ -161,7 +171,6 @@ textarea{
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
-    color: #9aa0a6;
     font-family: arial, sans-serif;
     font-size: 14px;
 }
@@ -169,6 +178,7 @@ textarea{
 .footer2 a {
     padding: 15px;
     text-decoration: none;
+    color: #9aa0a6;
 }
 
 .footer2 a:visited {

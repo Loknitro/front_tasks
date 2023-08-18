@@ -33,35 +33,56 @@ body {
     padding-left: 3%;
 }
 
-/*Make multiple cards to display each information separetedly, each must have the same size and spacing.
-  They all must be in the same row for better visualization, for now mobile won't be supported/taken into consideration.*/
+.country { grid-area: c1;}
+.temp { grid-area: c2;}
+.ws { grid-area: c3;}
+.hmdt { grid-area: c4;}
+.ftemp { grid-area: c5;}
+.condition { grid-area: c6;}
+
 .content {
-    display: flex;
-    flex: 1;
+    display: grid;
     padding: 20px 50px 0px 50px;
+    grid-template-areas: 'c1 c2 c3'
+                         'c4 c5 c6';
+    row-gap: 1em;
+    
 }
 
 .card {
-    box-shadow: 1em 1em 3em black;
-    padding: 1em;
     display: flex;
-    width: 7em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 2s opacity;
+    box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    width: 17em;
     height: 8em;
     background-color: #196ca2;
     border-radius: 25px;
-    justify-content: space-around;
     color: rgb(236, 236, 236);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    align-items: center;
 }
 
-.card + .card {
-    margin: 0em 0em 0em 1em;
+.card .title {
+    align-self: flex-start;
+}
+
+.card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .footer {
+    z-index: 6;
     background-color: #ff9912;
     padding: 10px;
+    display: flex;
 }
 
 .footer a {
