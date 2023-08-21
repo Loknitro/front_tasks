@@ -20,7 +20,7 @@ body {
 
 .header {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     padding-top: 20px;
     padding-left: 50px;
     color: white;
@@ -42,11 +42,13 @@ body {
 
 .content {
     display: grid;
-    padding: 20px 50px 0px 50px;
-    grid-template-areas: 'c1 c2 c3'
-                         'c4 c5 c6';
+    padding:2em;
+    grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+    column-gap: 1em;
     row-gap: 1em;
-    
+    flex-grow: 1;
+    align-items: center;
+    justify-items: center;
 }
 
 .card {
@@ -76,15 +78,17 @@ body {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+    font-size: 20px;
 }
 
 .footer {
+    display: flex;
+    justify-content: space-between;
     z-index: 6;
     background-color: #ff9912;
     padding: 10px;
-    display: flex;
 }
 
 .footer a {
-    color: #0000c4;
+    color: #420057;
 }

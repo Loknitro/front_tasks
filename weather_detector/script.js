@@ -37,17 +37,25 @@ getIP(function(ip) {
     getWeather(ip, function(weather) {
         let iconString = weather.current.condition.icon
         iconString = iconString.substring(21)
-        const countryCard = document.getElementById('country');
-        const tempCard = document.getElementById('temp');
-        const wsCard = document.getElementById('ws');
-        const humidityCard = document.getElementById('hmdt');
-        const ftempCard = document.getElementById('ftemp');
-        const conditionCard = document.getElementById('condition');
-
+        const cards = document.getElementsByClassName('card')
+        const countryCard = document.getElementById('country').getElementsByClassName('info')[0]
+        const tempCard = document.getElementById('temp').getElementsByClassName('info')[0]
+        const wsCard = document.getElementById('ws').getElementsByClassName('info')[0]
+        const humidityCard = document.getElementById('hmdt').getElementsByClassName('info')[0]
+        const ftempCard = document.getElementById('ftemp').getElementsByClassName('info')[0]
+        const conditionCard = document.getElementById('condition').getElementsByClassName('info')[0]
         
+        countryCard.textContent = weather.location.country + ", " + weather.location.name
+        tempCard.textContent = weather.current.temp_c + " ºC"
+        wsCard.textContent = weather.current.wind_kph + " Km/h"
+        humidityCard.textContent = weather.current.humidity + " g/m³"
+        ftempCard.textContent = weather.current.feelslike_c + " ºC"
 
-        let cards = document.getElementsByClassName("card")
-        
+        const conditionImage = document.createElement('img')
+        conditionImage.src = iconString
+        conditionCard.textContent = weather.current.condition.text
+        conditionCard.appendChild(conditionImage)
+
         for(const element of cards) {
             element.style.opacity = '1'
         }
